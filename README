@@ -1,0 +1,23 @@
+Bloglines
+========
+
+So basically, you just do this in your layout:
+
+  <div class="sidebar-node">
+    <h3>Blogroll</h3>
+    {{ "id" | bloglines: "folder", "target" }}
+  </div>
+
+Where "id" is your user name (not your email address, but the one for your 
+Bloglines blog). The arguments are optional: "folder" would be the name of the 
+folder you would like to show and "target" would be the target for of
+generated links, i.e. "_blank". These are about the same option you have, when showing your blog roll with the help of http://www.bloglines.com/help/share?tip=4
+
+I don't like the HTML Bloglines generates, so there is a second option for 
+a list output, with the same arguments:
+
+  <div class="sidebar-node">
+    <h3>Blogroll</h3>
+    {{ "id" | bloglines_ul: "folder", "target" }}
+  </div>
+
